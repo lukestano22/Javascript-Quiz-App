@@ -200,7 +200,6 @@ function startQuiz() {
     playAgainButton.style.display = 'none';
     showQuestion();
 
-    // Start the timer for the first question
     startTimer(60);
 }
 
@@ -264,8 +263,8 @@ function handleNextButton() {
         showQuestion();
     } else {
         showScore();
-        currentQuestionIndex = 0; // Reset question index for "Play Again"
-        score = 0; // Reset score for "Play Again"
+        currentQuestionIndex = 0;
+        score = 0;
         nextButton.style.display = 'none';
     }
 }
@@ -290,5 +289,5 @@ function resetQuiz() {
     score = 0;
     resetState();
     clearInterval(timer);
-    timerElement.innerHTML = '0'; // Reset timer display
+    timerElement.innerHTML = '0';
 }
